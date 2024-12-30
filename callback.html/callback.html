@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback URL</title>
+</head>
+<body>
+    <h1>Callback Received</h1>
+    <p>If you see this message, the callback was successful. Please close this window and return to the application.</p>
+    <script>
+        // Extract the token or authorization code from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const token = urlParams.get('token');
+        
+        // Log the values for debugging (remove in production)
+        console.log('Authorization Code:', code);
+        console.log('Access Token:', token);
+    </script>
+</body>
+</html>
